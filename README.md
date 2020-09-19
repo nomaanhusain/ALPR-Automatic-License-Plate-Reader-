@@ -7,7 +7,7 @@ important modules:
     pytesseract
 
 Important files:
-    car_number_plate.xml
+
     Tesseract-OCR
 
 
