@@ -17,6 +17,7 @@ def preprocess(img):
 	sobelx = cv2.Sobel(gray,cv2.CV_8U,1,0,ksize=3)
 	#cv2.imshow("Sobel",sobelx)
 	#cv2.waitKey(0)
+	#OTSU determines optimal threshold value automatically
 	ret2,threshold_img = cv2.threshold(sobelx,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 	#cv2.imshow("Threshold",threshold_img)
 	#cv2.waitKey(0)
