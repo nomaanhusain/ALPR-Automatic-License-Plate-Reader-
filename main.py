@@ -30,6 +30,9 @@ def cleanPlate(plate):
 	#thresh= cv2.dilate(gray, kernel, iterations=1)
 
 	_, thresh = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY)
+	#countours is a numpy list of all the contours in the image
+	#Each individual contour is a Numpy array of (x,y) coordinates of boundary points of the object.
+	
 	contours,hierarchy = cv2.findContours(thresh.copy(),cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
 
 	if contours:
